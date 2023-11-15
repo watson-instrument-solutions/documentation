@@ -69,13 +69,21 @@ The target audience for WIS are professional acoustician businesses only. It is 
 - Express
 - Node.js
 - MongoDB
+- Email.js
+- easyinvoice (npm package)
 
 ### Design:
 
 - Figma
+- draw.io
 
 ### Deployment:
 
 - Netlify
 - Mongo Could Atlas
 - Heroku
+
+## Application Architecture Diagram
+
+![Image]('./docs/WIS App architecture diagram.jpg')
+
