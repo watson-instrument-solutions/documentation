@@ -85,5 +85,8 @@ The target audience for WIS are professional acoustician businesses only. It is 
 
 ## Application Architecture Diagram
 
-![Image]('./docs/WIS App architecture diagram.jpg')
+![Image](./docs/WIS%20App%20architecture%20diagram.drawio.png)
+
+
+
 
