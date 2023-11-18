@@ -87,6 +87,10 @@ The target audience for WIS are professional acoustician businesses only. It is 
 
 ![Image](./docs/WIS%20App%20architecture%20diagram.drawio.png)
 
+## Data Flow Diagram
+
+![Image](./docs/WIS_dataflow.drawio.png)
+
 
 ## User Personas
 
@@ -112,7 +116,7 @@ Carol has a strong technical knowledge but is distrustful of giving her personal
 
 Kate (35) is the principal owner / operator of WIS. She handles all the booking, shipping, servicing, admin, and the majority of the client contact. She prefers bookings to come in via the website as its less admin work for her but she still takes some bookings over the phone from customers who dont like to use the web service. Her admin account is able to create ne customer users and make bookings for them (as in Carols case).
 
-Her partner, Craig, is an acoustician and often hires their equipment for his own contracts. Kate is able t make bookings under her own admin account fortht purpose.
+Her partner, Craig, is an acoustician and often hires their equipment for his own contracts. Kate is able to make bookings under her own admin account, or create a user account for that purpose.
 
 
 
