@@ -95,6 +95,10 @@ The target audience for WIS are professional acoustician businesses only. It is 
 
 ![Image](./docs/WIS_dataflow.drawio_V2.png)
 
+## Wireframes 
+
+![Image](./docs/WIS_ALL_V2_cropped.png)
+
 
 ## User Personas
 
