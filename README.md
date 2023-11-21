@@ -87,20 +87,15 @@ The target audience for WIS are professional acoustician businesses only. It is 
 - Mongo Could Atlas
 - Heroku
 
-## Application Architecture Diagram
-
-![Image](./docs/WIS%20App%20architecture%20diagram.drawio.png)
-
 ## Data Flow Diagram
 
 ![Image](./docs/WIS_dataflow.drawio_V2.png)
 
-## Wireframes 
+## Application Architecture Diagram
 
-![Image](./docs/WIS_ALL_V2_cropped.png)
+![Image](./docs/WIS%20App%20architecture%20diagram.drawio.png)
 
-
-## User Personas
+## User Stories
 
 ### 1 - Richard Whitely (Customer User)
 
@@ -126,6 +121,39 @@ Kate (35) is the principal owner / operator of WIS. She handles all the booking,
 
 Her partner, Craig, is an acoustician and often hires their equipment for his own contracts. Kate is able to make bookings under her own admin account, or create a user account for that purpose.
 
+
+
+## Wireframes 
+
+### Desktop Frames / Pageflow
+
+![Image](./docs/WIS_Pageflow_3crop.png)
+
+## Consultation Notes & Amendments
+
+During the design process I have been in ongoing consultation with the business owner (Kate) about various aspects of the business requirements. I've decided to scrap the auto invoice generation and email feature as shes advised me that she generally invoices after the return of the gear as often hire periods are extended. To cover that on the booking side, Kate will use her admin portal to amend the booking period to ensure theres no danger of double ups.
+
+We have also decided to leave the 'About Us' page out, Kate thinks it is unnecessary so we have agreed to park it for now and perhaps revisit when the final site is completed.
+
+She and Craig have both signed off on the initial design as of 21/11, their one note was to make sure there are some images and explanation of the equipment. I was planning including this on the 'hire equipment' page which they happy with. They will provide some images to use. 
+
+### Mobile frames
+
+![Image](./docs/WIS_ALL_mobile.png)
+
+### Design Notes
+
+In implementing the design I took a look at the current competitors websites or inspiration and make sure my design would be appropriate. Most of the designs are very functional and leave very little room for any creative visual components. I feel like this makes sense for the clientele of the business, its a very technical field and there is no need for salesmanship of any sort. Businesses come to hire equipment they need for a contract and generally want to be efficient and perfunctory about it. Therefore, Ive kept the design as minimal and as clear as I can. WIS already have some logo material so I have used those in the header component and built up from there. I based my colour and font choices on fitting with their logo design.
+
+
+
+
+## Trello
+
+here: https://trello.com/b/HYZPSzNc/wissite
+
+I will continue to take daily screenshots to document the project progress as it moves forward.
+I've opted for a simple 4 column approach of Brainstorm, ToDo, Doing, and Done. This helps me easily keep track of where I am, see how much has to be done, and not feel too overwhelmed. Putting things in the done column also helps motivation levels by giving me a sense of progression. 
 
 
 
