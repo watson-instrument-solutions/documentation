@@ -91,6 +91,41 @@ The target audience for WIS are professional acoustician businesses only. It is 
 
 ![Image](./docs/WIS_dataflow.drawio_V2.png)
 
+### Rough JSON Models
+
+```js 
+User {
+    "id": Number, unique, required = true,
+    "first name": String, required = true,
+    "last name": String, required = true,
+    "business name": String, required = true,
+    "telephone": Number, required = true,
+    "email": String, required = true,
+    "password": hash, required = true,
+    "address line": String, required = true,
+    "city/town": String, required = true
+    "postcode": Number, required = true
+}
+
+Booking {
+    "id": Number, unique, required = true,
+    "equipment id": Number, unique, required = true,
+    "user id": Number, unique, required = true,
+    "start date": Date, required = true,
+    "end date": Date, required = true
+}
+
+Equipment {
+    "id": Number, unique, required = true,
+    "item name": String, unique, required = true,
+    "description": String,
+    "price per day": Number, required = true,
+    "price per week": Number, required = true,
+    "price per month": Number, required = true,
+    "supply cost": Number
+}
+```
+
 ## Application Architecture Diagram
 
 ![Image](./docs/WIS%20App%20architecture%20diagram.drawio.png)
