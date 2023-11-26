@@ -43,7 +43,7 @@ Admin accounts will be able to create other admin, and non admin accounts, the b
 
 #### CRUD all bookings / users
 
-Admin accounts will be able to view and edit / delete all current bookings from all users. They will also be able to view, create/update/delete all users if necessary.
+Admin accounts will be able to view and edit / delete all current bookings from all users. They will also be able to view, create, and delete all users if necessary.
 
 #### CRUD all equipment
 
