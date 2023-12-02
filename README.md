@@ -194,8 +194,20 @@ In implementing the design I took a look at the current competitors websites or 
 
 here: https://trello.com/b/HYZPSzNc/wissite
 
-I will continue to take daily screenshots to document the project progress as it moves forward.
+
 I've opted for a simple 4 column approach of Brainstorm, ToDo, Doing, and Done. This helps me easily keep track of where I am, see how much has to be done, and not feel too overwhelmed. Putting things in the done column also helps motivation levels by giving me a sense of progression. 
 
+
+Below are some screenshots of my trello board as I moved through the project up until now. 
+
+![Image](./docs/Screenshot%202023-11-21%20133105.png)
+![Image](./docs/Screenshot%202023-11-21%20162018.png)
+![Image](./docs/Screenshot%202023-11-22%20214223.png)
+![Image](./docs/Screenshot%202023-11-23%20213442.png)
+![Image](./docs/Screenshot%202023-11-27%20221307.png)
+![Image](./docs/Screenshot%202023-11-29%20210441.png)
+![Image](./docs/Screenshot%202023-11-30%20204747.png)
+
+I will continue to take daily screenshots to document the project progress as it moves forward.
 
 
