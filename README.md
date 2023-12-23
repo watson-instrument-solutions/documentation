@@ -210,4 +210,93 @@ Below are some screenshots of my trello board as I moved through the project up 
 
 I will continue to take daily screenshots to document the project progress as it moves forward.
 
+# PART B
 
+## Server Routes - Manual Testing
+
+I have tested my server routes thoroughly throughout the development of the app. During server development I ran testing via postman, running the server locally. I've screen-shotted all the results to demonstrate they're all returning with expected their outcome:
+
+## USER Routes
+
+users/register-account:
+
+expects email and password, returns user_id, email, hashed password, and admin status
+![Image](./docs/register-account.png)
+
+users/login:
+
+expects email and password, returns jwt
+![Image](./docs/login.png)
+
+users/get-me:
+
+expects jwt in the req header, returns user object
+![Image](./docs/get-me.png)
+
+users/update-me
+
+expects jwt in the header and new data to update in the req body, returns updated user object
+![Image](./docs/update-me.png)
+
+users/delete-me
+
+expects jwt in header, returns success message
+![Image](./docs/delete-me.png)
+
+users/admin/delete/:user_id
+
+expects admin jwt in header and user id in the url, returns success message
+![Image](./docs/admin-user-delete.png)
+
+## EQUIPMENT Routes
+
+equipment/get-all
+
+expects nothing, grants access to all. returns all equipment objects
+![Images](./docs/equipment-get-all.png)
+
+equipment/add-new
+
+expects admin jwt in header and equipment data in body, returns new equipment object with _id
+![Image](./docs/equipment-add-new.png)
+
+equipment/update/:id
+
+expects admin jwt in header, equipment id in url, and new data fields to update in req body. Returns updated equipment object.
+![Image](./docs/equipment-update.png)
+
+equipment/delete/:id
+
+expects admin jwt in header, equipment id in url. Returns success message.
+![Image](./docs/equipment-delete.png)
+
+## BOOKING Routes
+
+booking/get-all
+
+expects admin jwt in header. Returns all booking objects
+
+![Image](./docs/booking-get-all.png)
+
+booking/add-new
+
+expects jwt in header, startDate, endDate, equipmentIDs, totalPrice fields in req body. Returns success message, new booking object with id, and adds start date and end date to bookedDates fields on equipment objects.
+
+![Image](./docs/booking-add-new.png)
+![Image](./docs/booking-updatesequipment.png)
+
+booking/update/:id
+
+expects admin jwt in header, data to update in the req body. Returns updated booking object.
+
+![Image](./docs/booking-update.png)
+
+booking/delete/:id
+
+expects jwt in header and booking id in url, returns success message, removes bookedDates data from equipment objects, and updates stock number on equipment objects.
+
+![Image](./docs/booking-delete.png)
+
+---
+
+All routes handle errors - successfully returning unauthorized, bad request, or server error where appropriate. I haven't screen shotted all of those because Ive run out of time!
