@@ -220,12 +220,12 @@ I have tested my server routes thoroughly throughout the development of the app.
 
 users/register-account:
 
-expects email and password, returns user_id, email, hashed password, and admin status
+expects email and password, returns user_id, email, hashed password, and admin status. if user email already exists, returns error message. If pw is less than 8 characters, returns error message.
 ![Image](./docs/register-account.png)
 
 users/login:
 
-expects email and password, returns jwt
+expects email and password, returns jwt. if email not found or pw does not match db password, returns error message
 ![Image](./docs/login.png)
 
 users/get-me:
@@ -300,3 +300,105 @@ expects jwt in header and booking id in url, returns success message, removes bo
 ---
 
 All routes handle errors - successfully returning unauthorized, bad request, or server error where appropriate. I haven't screen shotted all of those because Ive run out of time!
+
+
+## Client - Manual Testing
+
+I have run through some use case scenarios and provided screenshots of the deployed client functionality.
+
+Case - Richard:
+
+Richard is a regular user, he needs to make a booking Jan so he logs into WIS:
+
+![Image](./docs/richard/richard-login.png)
+
+He gets his password wrong and server returns an error message which is displayed:
+
+![Image](./docs/richard/richard-pw-error.png)
+
+He navigates to the hire page, enters the dates he needs to book for and hits check availability:
+
+![Image](./docs/richard/richard-equipment-check.png)
+
+Seeing the 2 items he needs are available for his booking period, he adds them to his cart and clicks the cart icon to navigate to the confirmation page:
+
+![Image](./docs/richard/richard-confirmation.png)
+
+The calculate price function returns the correct price to 2 weeks hire, satisfied that all his details are correct he clicks confirm booking. Success message is displayed and he is taken to his dashboard to view the booking:
+
+![Image](./docs/richard/richard-dashboard.png)
+
+From here he can delete the booking if he wishes. Updates to any booking must be performed by an admin as per business requirements, so if he needs to do that he can contact Kate directly or navigate to the contact page to look up her details:
+
+<i>(note I intended to change the displaying of the booking id as its largely useless information to the user. I wanted to give the user the option of saving a booking name to the booking object - but ran out of time.)</i>
+
+![Image](./docs/richard/richard-contact.png)
+
+Other user functions available to Richard are:
+
+<b>Update</b> his user info. He can click the edit button under his user details form on either his dashboard page or the confirm booking page. This makes the form editable, he can then change any detail in place and press save which will send the updated form data to the server to save to the database. The form then repopulates with the updated data.
+
+![Image](./docs/richard/richard-update.png)
+![Image](./docs/richard/richard-details-saved.png)
+
+<i>(note - I intended to add some animated loading icons to the user form when updating, and when fetching user details - unfortunately have run out of time to implement this)</i>
+
+ <b>Delete</b> his own account. He can do that via his user dashboard, he will be prompted with a confirm window, and if he proceeds his account and all associated bookings will be cleared from the database and the client navigates to the home page.
+
+ <b>Log out.</b> By clicking the log out button in the nav bar, his user jwt and cart info are wiped from local storage and the client navigates to the home page.
+
+ ---
+
+ Case: Kate (admin)
+
+ Kate is the owner operator of the business. I have tried to give her as much functionality as possible over the data but unfortunately die to time constraints have not implemented everything to the standard I'd like. However, running through it, on log in admins are directed to the admin portal:
+
+![Image](./docs/kate/kate-portal.png)
+
+As you can see there are some small issues with the layout (bookings text and container are not quite aligned correctly) and the forms displaying 'invalid date' as placeholder text. This is due to some date formatting issues that I haven't had the time to resolve. However the functionality is all working, all the dropdown menus contain all the users, bookings, and equipment as expected and display them in the fields when selected:
+
+![Image](./docs/kate/kate-richard-booking.png)
+
+Admins cannot directly create a user account through the portal but can register an account on behalf of a customer i needs be through the register page. Alternatively they can make bookings through the hire page etc. It would have been nice to be able to implement these functions through the admin portal but as the functionality is already present indirectly, I moved on for the sake of saving time.
+
+A requirement from Kate was to be able to extend the booking period which is possible by clicking the edit button under the booking form:
+
+![Image](./docs/kate/kate-update-booking.png)
+
+This renders fields to add new start and end dates and to recalculate to the booking price. After selecting dates, clicking recalculate will call the calculate price function with the new date parameters and return the new price to the updated price field. Hitting the save button will send that data to the update booking route and save it to the database, a success message is then returned as an alert to the user. 
+
+The equipment form functions in a similar way except that its fields are edit in place (I struggled to achieve this in the booking form because I was reformatting the dates and calling another function to display the booked equipment from the equipment ids, only the equipment ids are available on the booking object). 
+
+The equipment form also allows admins to add new equipment, it functions in the same way as the edit in place function, only when 'save new' is pressed it calls a handler to send the data to the add new equipment server route.
+
+<i>note the page does not re-render after any update, add, or deletion and needs to be manually refreshed to repopulate the dropdown menus - another victim of the time constraint unfortunately.</i>
+
+## Trello
+
+Ive continued to use the same trello board from the part A documentation.
+
+It can be viewed here:
+
+https://trello.com/b/HYZPSzNc/wissite
+
+I generally used it to keep track of issues that came up, and overall progress through development. Admittedly my use of it is fairly basic, working solo though it was enough to keep me on track of my progress.
+Heres a few slides to outline the general progression of the build and how Ive used trello:
+
+![Image](./docs/trello_partB/Screenshot%202023-11-27%20221307.png)
+![Image](./docs/trello_partB/Screenshot%202023-12-03%20130832.png)
+![Image](./docs/trello_partB/Screenshot%202023-12-09%20162300.png)
+![Image](./docs/trello_partB/Screenshot%202023-12-09%20162327.png)
+![Image](./docs/trello_partB/Screenshot%202023-12-11%20234025.png)
+![Image](./docs/trello_partB/Screenshot%202023-12-11%20234057.png)
+![Image](./docs/trello_partB/Screenshot%202023-12-12%20215347.png)
+![Image](./docs/trello_partB/Screenshot%202023-12-22%20172812.png)
+
+## Git
+
+Heres a link to the organisation repository:
+
+https://github.com/watson-instrument-solutions
+
+As a solo dev I stuck to direct commits to main, I know thats not ideal for assignment marks but it saved me time and head space. 
+
+I committed often and didn't run into any problems.
