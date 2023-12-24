@@ -212,6 +212,29 @@ I will continue to take daily screenshots to document the project progress as it
 
 # PART B
 
+Deployed site: https://subtle-rolypoly-42ba7c.netlify.app/
+
+Deployed server: https://wis-api-2q17.onrender.com/
+
+## General development notes
+
+The app is largely complete as serves the purpose as described in the part A documentation. Working as a solo dev, time constraints have impeded where I'd like the deployed app to be at this stage.
+
+Having a little more time I would have liked to make the design and UX better, the site feels a little clunky to use and could be improved on with a better design of the homepage, the use of professional images for the equipment, more loading animations and custom alert messages etc. The mobile view of some pages is also not resolved correctly.
+
+I'd also have implemented some of the features outlined as nice to haves (email notifications for new bookings, forgot password etc), as well as some small issues detailed in the client testing section below.
+
+However, overall I'm very happy with what I've managed to achieve in the time Ive had to do it. With some more consultation and revisions with the business owners, I hope it'll be live and helping them out early in the new year.
+
+
+## Deviations from the part A planning
+
+- Editing forms are now (almost) all edit in place forms, I changed this aspect of the design after receiving some feedback from the part A designs. This change helps the save space on the page and is in line with the minimalist design choice.
+
+- With edit in place forms saving space I decided to do away with the booking update page and keep that function on the admin portal. This makes things much more understandable and straightforward for the user.
+
+- Ive also decided not to use a calendar on the hire page. I initially tried to do this but quickly felt it was going to be a lot of work and time to get working and the UI would be unnecessarily complex. I instead opted for a simple bootstrap date form which has a dropdown date picker, this feels much more intuitive to me. 
+
 ## Server Routes - Manual Testing
 
 I have tested my server routes thoroughly throughout the development of the app. During server development I ran testing via postman, running the server locally. I've screen-shotted all the results to demonstrate they're all returning with expected their outcome:
